@@ -1,3 +1,4 @@
+"use strict";
 /** Simple demo Express app. */
 
 const express = require("express");
@@ -5,6 +6,10 @@ const app = express();
 
 // useful error class to throw
 const { NotFoundError } = require("./expressError");
+
+const { findMean, findMedian, findMode } = require("./stats");
+
+const { convertStrNums } = require("./utils");
 
 const MISSING = "Expected key `nums` with comma-separated list of numbers.";
 
